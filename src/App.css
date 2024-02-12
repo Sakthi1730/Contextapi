@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background-color: rgb(238, 232, 232);
+  width: 70%;
+  
+  margin-left: 10%;
+  margin-top: 5%;
+  padding: 5%;
+
 }
 
 .App-logo {
@@ -35,4 +42,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+.btn{
+  background-color: orange;
+  border-color: orange;
+}
+.quantity{
+  text-decoration-color: orange;
 }

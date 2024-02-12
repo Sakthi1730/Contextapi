@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import Card from './Card.jsx';
+import { useState } from 'react';
+import { useContext } from 'react';
+import { ProductContext } from './ProductContext';
+
 
 function App() {
+
+  const {product} = useContext(ProductContext)
+  console.log(product);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        product.map((product)=>
+        {
+          return<Card product={product}/>
+        })
+        
+      }
+      
+    
+
     </div>
   );
 }
